@@ -1,17 +1,334 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@android:color/holo_blue_light"
     android:layout_height="match_parent">
 
+
     <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="서울특별시"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/pricecoment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/ds1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="최고 거래건수"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12dp"
+            android:textStyle="bold">
+
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/ds2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="최저 거래건수"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12dp"
+            android:textStyle="bold">
+
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pricecoment">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical">
+
+                    <TextView
+                        android:id="@+id/hightrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+
+
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+
+
+                        android:textStyle="bold">
+
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/hightradeyear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/hightrade"
+                        android:layout_centerHorizontal="true"
+
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12dp"
+
+
+                        android:textStyle="bold">
+
+
+                    </TextView>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical">
+
+                    <TextView
+                        android:id="@+id/rowtrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+
+
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+
+
+                        android:textStyle="bold">
+
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/rowtradeyear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rowtrade"
+                        android:layout_centerHorizontal="true"
+
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12dp"
+
+
+                        android:textStyle="bold">
+
+
+                    </TextView>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/updatetimelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l1"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/timeimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/timelayout"
+            android:src="@drawable/updatetime"></ImageView>
+
+        <RelativeLayout
+            android:id="@+id/timelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/updatetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="업데이트 시간 : "
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12dp"></TextView>
+
+            <TextView
+                android:id="@+id/updatetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/updatetext"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12dp"></TextView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="첫 번째 프래그먼트"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:layout_below="@+id/updatetimelayout">
 
-</LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reinfor"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/pyeungsumenucolor"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="신규"
+                android:textSize="@dimen/pyeungsu_menusize"
+                android:textStyle="normal"
+                android:visibility="gone">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="@dimen/pyeungsu_layout"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="계약년월"
+                android:textSize="@dimen/pyeungsu_menusize"
+                android:textStyle="normal">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="@dimen/pyeungsu_layout"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="거래건수"
+                android:textSize="@dimen/pyeungsu_menusize"
+                android:textStyle="normal">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="@dimen/pyeungsu_layout"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="상승여부"
+                android:textSize="@dimen/pyeungsu_menusize"
+                android:textStyle="normal">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/highper"
+                android:layout_width="@dimen/pyeungsu_layout"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="최고건수대비 거래률"
+                android:textSize="@dimen/pyeungsu_menusize"
+                android:textStyle="normal"
+                android:visibility="visible">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/daydatarecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/reinfor"
+            android:layout_marginTop="5dp"
+            android:padding="5dp" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/b1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        app:cardCornerRadius="2000dp">
+
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:src="@drawable/recyclerviewup" />
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
