@@ -6,6 +6,93 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardview_toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:cardElevation="6dp">
+
+        <ImageView
+
+            android:id="@+id/finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/finish">
+
+        </ImageView>
+
+        <RelativeLayout
+            android:id="@+id/edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/p_namelayout"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/p_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="전국"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold|normal">
+
+                </TextView>
+
+
+                <ImageView
+                    android:id="@+id/p_nameinfor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/p_name"
+                    android:src="@drawable/nameinfor"
+
+                    android:visibility="visible">
+
+                </ImageView>
+
+
+                <TextView
+                    android:id="@+id/p_juso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/p_name"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textStyle="bold|normal">
+
+                </TextView>
+            </RelativeLayout>
+
+            <ImageView
+
+                android:id="@+id/Map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="10dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
