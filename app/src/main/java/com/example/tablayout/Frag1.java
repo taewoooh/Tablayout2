@@ -50,6 +50,10 @@ public class Frag1 extends Fragment implements View.OnClickListener {
     TextView hightradeyear;
     TextView rowtrade;
     TextView rowtradeyear;
+
+    TextView nowtrade;
+    TextView nowtrade1;
+    TextView nowtradeyear;
     Progressdialog progressDialog;
     int t;
     int tx;
@@ -146,6 +150,10 @@ public class Frag1 extends Fragment implements View.OnClickListener {
         rowtrade = (TextView) v.findViewById(R.id.rowtrade);
         rowtradeyear = (TextView) v.findViewById(R.id.rowtradeyear);
 
+        nowtrade = (TextView) v.findViewById(R.id.nowtrade);
+
+        nowtradeyear = (TextView) v.findViewById(R.id.nowtradeyear);
+
         b1.setOnClickListener(this::onClick);
 
     }
@@ -201,6 +209,8 @@ public class Frag1 extends Fragment implements View.OnClickListener {
 
                 hightrade.setText(String.valueOf(listViewItems.get(0).getHightrade()));
                 rowtrade.setText(String.valueOf(listViewItems.get(0).getRowtrade()));
+                nowtrade.setText(String.valueOf(listViewItems.get(0).getTrade()));
+
 
                // Numcounthandler(hightrade, listViewItems.get(0).getHightrade(), rowtrade, listViewItems.get(0).getRowtrade());
 
@@ -210,6 +220,9 @@ public class Frag1 extends Fragment implements View.OnClickListener {
 
                 //rowtrade.setText(String.valueOf(listViewItems.get(0).getRowtrade()) + " 건");
                 rowtradeyear.setText("(" + String.valueOf(listViewItems.get(0).getRowyear()) + "." + String.valueOf(listViewItems.get(0).getRowmonth()) + ")");
+
+
+                nowtradeyear.setText("(" + String.valueOf(listViewItems.get(0).getYear()) + "." + String.valueOf(listViewItems.get(0).getMonth()) + ")");
                 //progressDialog.dismiss();
             }
 

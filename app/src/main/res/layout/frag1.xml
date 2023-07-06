@@ -9,12 +9,12 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:layout_marginTop="30dp"
         android:text="서울특별시"
         android:textColor="@android:color/black"
         android:textSize="25dp"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        android:visibility="gone">
 
     </TextView>
 
@@ -34,7 +34,22 @@
             android:padding="2dp"
             android:text="최고 거래건수"
             android:textColor="@android:color/darker_gray"
-            android:textSize="12dp"
+            android:textSize="11dp"
+            android:textStyle="bold">
+
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/ds1_1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="현재건수"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="11dp"
             android:textStyle="bold">
 
 
@@ -50,7 +65,7 @@
             android:padding="2dp"
             android:text="최저 거래건수"
             android:textColor="@android:color/darker_gray"
-            android:textSize="12dp"
+            android:textSize="11dp"
             android:textStyle="bold">
 
 
@@ -108,7 +123,64 @@
                         android:layout_centerHorizontal="true"
 
                         android:textColor="@android:color/darker_gray"
-                        android:textSize="12dp"
+                        android:textSize="10dp"
+
+
+                        android:textStyle="bold">
+
+
+                    </TextView>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical">
+
+                    <TextView
+                        android:id="@+id/nowtrade"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+
+
+                        android:textStyle="bold">
+
+
+                    </TextView>
+
+
+
+                    <TextView
+                        android:id="@+id/nowtradeyear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nowtrade"
+                        android:layout_centerHorizontal="true"
+
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="10dp"
 
 
                         android:textStyle="bold">
@@ -162,7 +234,7 @@
                         android:layout_centerHorizontal="true"
 
                         android:textColor="@android:color/darker_gray"
-                        android:textSize="12dp"
+                        android:textSize="10dp"
 
 
                         android:textStyle="bold">
@@ -291,7 +363,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="최고건수대비 거래률"
+                android:text="최고건수 접근률"
                 android:textSize="@dimen/pyeungsu_menusize"
                 android:textStyle="normal"
                 android:visibility="visible">
