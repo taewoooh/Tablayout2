@@ -62,6 +62,21 @@ public class Util {
 
     }
 
+    public String Yearchange(String month) {
+
+        if (month.contains("91")) {
+            month = month.replace("91", "10");
+
+        } else if (month.contains("92")) {
+            month = month.replace("92", "11");
+        } else if (month.contains("93")) {
+            month = month.replace("93", "12");
+
+        }
+
+        return month;
+
+    }
     public String Priceedit(String price) {  // 금액 한글로 변경하기
 
         Log.e("taewoooh88", "");

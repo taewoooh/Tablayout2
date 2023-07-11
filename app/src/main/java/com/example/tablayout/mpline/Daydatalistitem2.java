@@ -1,4 +1,5 @@
-package com.example.tablayout;
+package com.example.tablayout.mpline;
+
 
 
 import com.google.gson.annotations.Expose;
@@ -9,34 +10,11 @@ import com.google.gson.annotations.SerializedName;
  * Created by taewoo on 2019-11-16.
  */
 
-public class Daydatalistitem {
-
-    public Daydatalistitem(String si,  int year, int month, int yearmonth,int trade, String per ,int hightrade,
-                           int highyear,int highmonth, int rowtrade, int rowyear,int rowmonth,String updatetime) {
-
-        this.si = si;
-        this.year = year;
-        this.month = month;
-        this.yearmonth = yearmonth;
-        this.trade = trade;
-
-        this.per = per;
-
-        this.hightrade = hightrade;
-        this.highyear = highyear;
-        this.highmonth = highmonth;
-
-        this.rowtrade = rowtrade;
-        this.rowyear = rowyear;
-        this.rowmonth = rowmonth;
-        this.updatetime = updatetime;
-        this.ym = ym;
+public class Daydatalistitem2 {
 
 
-
-    }
-    public Daydatalistitem(String si,  int year, int month, int yearmonth,int trade, String per ,int hightrade,
-                           int highyear,int highmonth, int rowtrade, int rowyear,int rowmonth,String updatetime,String ym) {
+    public Daydatalistitem2(String si, int year, int month, int yearmonth, int trade, String per , int hightrade,
+                            int highyear, int highmonth, int rowtrade, int rowyear, int rowmonth, String updatetime, String ym) {
 
         this.si = si;
         this.year = year;
