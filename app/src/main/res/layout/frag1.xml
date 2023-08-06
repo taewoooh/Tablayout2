@@ -767,7 +767,6 @@
                     android:id="@+id/linechartlayout10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/linechartlayout"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
                     android:visibility="visible">

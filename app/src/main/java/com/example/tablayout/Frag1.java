@@ -129,24 +129,27 @@ public class Frag1 extends Fragment implements View.OnClickListener {
 
         if (savedInstanceState != null) {
 
-            Log.e("onCreateView if", "------>" + getTitle());
+            Log.e("onCreateView if", "------>" );
         } else {
             // following code to attach fragment initially
 
-            Log.e("onCreateView else", "------>" + getTitle());
+            Log.e("onCreateView else", "------>" );
         }
 
 
         b_btn=1;
         m_btn=1;
         j_btn=1;
+
+      //  btnch();
+
         infor = 0;
         findview(v);
 
 
 
 
-      //  btnch();
+
 
 
         marker.setChartView(lineChart);
@@ -408,12 +411,7 @@ public class Frag1 extends Fragment implements View.OnClickListener {
         return v;
     }
 
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        super.onViewStateRestored(savedInstanceState);
-//       String s =  new TWPreference(getActivity()).getString("매매전세월세2","111");
-//        Log.e("onViewStateRestored", "" + s);
-    }
+
 
     public void Btncheck() {
 
@@ -909,6 +907,7 @@ public class Frag1 extends Fragment implements View.OnClickListener {
 
         btnGone();
 
+        lineData.clearValues();
         Buyset();
         Rentset();
         Monthset();
@@ -994,7 +993,7 @@ public class Frag1 extends Fragment implements View.OnClickListener {
     }
 
     public void btncheck1() {
-        Log.e("ㅅㅂ매매전세월세", "" + new TWPreference(getActivity()).getString("매매전세월세버튼2", "111"));
+        Log.e("ㅅㅂ매매전세월세", "" + new TWPreference(getActivity()).getString("매매전세월세버튼2", "1111"));
 
         if (new TWPreference(getActivity()).getString("매매전세월세버튼2", "111").equals("100")) {
             j1.performClick();
@@ -1527,10 +1526,10 @@ public class Frag1 extends Fragment implements View.OnClickListener {
     public void onDestroy() {
         super.onDestroy();
 
-        //   String s = String.valueOf(b_btn) + String.valueOf(j_btn) + String.valueOf(m_btn);
+           String s = String.valueOf(b_btn) + String.valueOf(j_btn) + String.valueOf(m_btn);
 
         Log.e("버튼상태 확인onDestroy", " - > " + b_btn + " / " + j_btn + " / " + m_btn);
-//        new TWPreference(getActivity()).putString("매매전세월세버튼2", s);
+      //  new TWPreference(getActivity()).putString("매매전세월세버튼2", s);
 //
 //        new TWPreference(getActivity()).putInt("기간", linechartday);
     }
@@ -1694,7 +1693,7 @@ public class Frag1 extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.m1:
-                Log.e("버튼 확인M1", "-- > " + b_btn + j_btn + m_btn);
+
                 if (b_btn == 1) { // offf
 
                     BDataSet.setVisible(false);
@@ -1721,15 +1720,16 @@ public class Frag1 extends Fragment implements View.OnClickListener {
 
                     b_btn = 1;
                 }
+                Log.e("버튼 확인M1", "-- > " + b_btn + j_btn + m_btn);
                 String s1 = String.valueOf(b_btn) + String.valueOf(j_btn) + String.valueOf(m_btn);
 
 
-             //   new TWPreference(getActivity()).putString("매매전세월세2",s1);
+                new TWPreference(getActivity()).putString("매매전세월세버튼2",s1);
 
                 break;
 
             case R.id.j1:
-                Log.e("버튼 확인J1", "-- > " + b_btn + j_btn + m_btn);
+
 
                 if (j_btn == 1) { //off
 
@@ -1758,15 +1758,15 @@ public class Frag1 extends Fragment implements View.OnClickListener {
                     j_btn = 1;
 
                 }
-
+                Log.e("버튼 확인J1", "-- > " + b_btn + j_btn + m_btn);
                 String s2 = String.valueOf(b_btn) + String.valueOf(j_btn) + String.valueOf(m_btn);
-             //   new TWPreference(getActivity()).putString("매매전세월세2",s2);
+                new TWPreference(getActivity()).putString("매매전세월세버튼2",s2);
                 /////////////////////////////////////////////////////////////////////////
 
                 break;
 
             case R.id.w1:
-                Log.e("버튼 확인W1", "-- > " + b_btn + j_btn + m_btn);
+
 
                 if (m_btn == 1) {     //   offf
 
@@ -1798,9 +1798,9 @@ public class Frag1 extends Fragment implements View.OnClickListener {
 
 
                 }
-
+                Log.e("버튼 확인W1", "-- > " + b_btn + j_btn + m_btn);
                 String s3 = String.valueOf(b_btn) + String.valueOf(j_btn) + String.valueOf(m_btn);
-              //  new TWPreference(getActivity()).putString("매매전세월세2",s3);
+                new TWPreference(getActivity()).putString("매매전세월세버튼2",s3);
 
                 break;
 
